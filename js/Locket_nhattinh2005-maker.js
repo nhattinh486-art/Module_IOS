@@ -3,13 +3,13 @@ const mapping = {
   'Locket': ['Gold']
 };
 // =========   Phần cố định  ========= // 
-// =========  @nhattinh2005-maker ========= // 
+// =========  @nhattinh486-art ========= // 
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
   obj = JSON.parse($response.body);
 
 obj.Attention = "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
 
-// Đã đổi tên biến từ nhattinh2005-maker thành nhattinh_maker để tránh lỗi cú pháp dấu trừ (-)
+// Đã đổi tên biến từ nhattinh486-art thành nhattinh486-art để tránh lỗi cú pháp dấu trừ (-)
 var nhattinh_maker = {
       auto_resume_date: null,
       display_name: "locket_1600_1y",
@@ -42,7 +42,7 @@ const match = Object.keys(mapping).find(e => ua.includes(e));
 
 if (match) {
   let [e, s] = mapping[match];
-  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = nhattinh_maker) : obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker, obj.subscriber.entitlements[e] = locketGold;
+  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = nhattinh486-art) : obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker, obj.subscriber.entitlements[e] = locketGold;
 } else {
   obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker;
   obj.subscriber.entitlements.pro = locketGold;
