@@ -106,7 +106,7 @@ const mapping = {
   'Percento': ['premium'],
   'Planny': ['premium'],
   'CPUMonitor': ['Pro'],
-  'Locket': ['Gold'],
+  // 'Locket': ['Gold'], // Đã tách riêng xử lý trong Locket_nhattinh486-art.js để tránh xung đột
   'My%20Tim': ['Pro'],
   'Photom': ['premium', 'pixelmator_photo_pro_subscription_v1_pro_offer'],
   'mizframa': ['premium', 'mf_20_lifetime2'],
