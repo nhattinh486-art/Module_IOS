@@ -7,11 +7,22 @@
 // ============================================================
 
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"] || "";
-var obj = JSON.parse($response.body);
+var obj = {};
+try {
+    obj = JSON.parse($response.body);
+} catch (e) {
+    obj = {};
+}
 
 if (ua.includes("Locket")) {
     obj.Attention = "Chúc mừng bạn! Vui lòng không sử dụng chúng dưới mục đích thương mại!";
     obj.entries = obj.entries || {};
+
+    // ============================================================
+    // 👉 ÉP LÀM MỚI CACHE (CHỐNG RỚT SAU MỘT THỜI GIAN)
+    // ============================================================
+    obj.configUpdateTimeMillis = Date.now().toString();
+    obj.state = "UPDATE";
 
     // ============================================================
     // 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL

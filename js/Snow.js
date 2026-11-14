@@ -1,4 +1,4 @@
-var nhattinh2005-maker = JSON.parse($response.body);
+var nhattinh_maker = JSON.parse($response.body);
 const ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
 const times = Date.now();
 
@@ -9,7 +9,7 @@ const list = {
 
 for (const key of Object.keys(list)) {
     if (new RegExp(`^${key}`, "i").test(ua)) {
-        nhattinh2005-maker.result = {
+        nhattinh_maker.result = {
         "products": [
             {
                 "managed": true,
@@ -35,4 +35,4 @@ for (const key of Object.keys(list)) {
     }
 }
 
-$done({ body: JSON.stringify(nhattinh2005-maker) });
+$done({ body: JSON.stringify(nhattinh_maker) });

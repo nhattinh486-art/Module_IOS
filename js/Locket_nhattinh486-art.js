@@ -42,7 +42,7 @@ const match = Object.keys(mapping).find(e => ua.includes(e));
 
 if (match) {
   let [e, s] = mapping[match];
-  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = nhattinh486-art) : obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker, obj.subscriber.entitlements[e] = locketGold;
+  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = nhattinh_maker) : obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker, obj.subscriber.entitlements[e] = locketGold;
 } else {
   obj.subscriber.subscriptions["locket_1600_1y"] = nhattinh_maker;
   obj.subscriber.entitlements.pro = locketGold;
